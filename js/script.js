@@ -29,16 +29,16 @@ map.addLayer(layer)
 var geojson;
 
   //this function takes a value and returns a color based on which bucket the value falls between
-  function getColor(d) {
-      return d > 1000000000 ? '#0000cc' :
-             d > 500000000  ? '#BD0026' :
-             d > 200000000  ? '#E31A1C' :
-             d > 10000000  ? '#FC4E2A' :
-             d > 5000000   ? '#FD8D3C' :
-             d > 100000   ? '#FEB24C' :
-             d < 100000   ? '#FED976' :
-                        '#FFFFFF';
-  }
+  // function getColor(d) {
+  //     return d > 1000000000 ? '#0000cc' :
+  //            d > 500000000  ? '#BD0026' :
+  //            d > 200000000  ? '#E31A1C' :
+  //            d > 10000000  ? '#FC4E2A' :
+  //            d > 5000000   ? '#FD8D3C' :
+  //            d > 100000   ? '#FEB24C' :
+  //            d < 100000   ? '#FED976' :
+  //                       '#FFFFFF';
+  // }
 
   // //this function returns a style object, but dynamically sets fillColor based on the data
   // function style(feature) {
