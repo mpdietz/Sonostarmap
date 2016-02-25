@@ -70,9 +70,15 @@ var geojson;
         layer.bringToFront();
     }
 
-
 // Update the infowindow
       console.log(layer.feature.properties.name);
     $('#infoWindow').text(layer.feature.properties.name);
 
   }
+
+  $.getJSON('data/world-countries.geojson', function(state_data) {
+    geojson = L.geoJson(state_data,{
+      style: style,
+      onEachFeature: onEachFeature
+    }).addTo(map3);
+  });
