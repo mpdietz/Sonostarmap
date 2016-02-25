@@ -1,0 +1,43 @@
+html {
+      font-family: sans-serif;
+    }
+    .background {
+      background-image: url("http://turbo.designwoop.com/uploads/2012/03/18_free_subtle_textures_wood_pattern.jpg");
+    }
+    .header {
+    width: 100%;
+    height: 100px;
+    background-color: #55c107;
+  }
+
+        h1 {
+      font-size: 20px;
+      color: #ffffff;
+        }
+
+    #myMap {
+      width: 80%;
+      height: 300px;
+      padding: 10px;
+      background-color: gray;
+      background-position: center;
+    }
+
+    button {
+      width: 200px;
+      height: 73px;
+      margin-bottom: 50px;
+      font-size: 24px;
+      border-radius: 10px;
+      margin-right: 10px;
+    }
+
+    .galleryimg{
+
+      width: "300"; 
+      height:"300";
+     }
+
+     #gallery {
+      width: 100%;
+     }
