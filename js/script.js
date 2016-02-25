@@ -61,7 +61,7 @@ var geojson;
     });
 
       console.log(layer.feature.properties.FORMAL_EN);
-    $('#infoWindow').append(layer.feature.properties.FORMAL_EN + layer.feature.properties.POP_EST;
+    $('#infoWindow').append(layer.feature.properties.FORMAL_EN + layer.feature.properties.POP_EST);
   }
 
 
