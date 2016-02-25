@@ -16,9 +16,6 @@ map.addLayer(layer)
 
 // var miniMap = new L.Control.GlobeMiniMap(options).addTo(map);
 
- $.getJSON('data/world-countries.geojson', function(data) {
-    console.log(data);
-
  var panOptions = {
     animate: true,
     duration: 2
@@ -28,7 +25,7 @@ map.addLayer(layer)
 
 var geojson;
 
-  //this function takes a value and returns a color based on which bucket the value falls between
+  // this function takes a value and returns a color based on which bucket the value falls between
   // function getColor(d) {
   //     return d > 1000000000 ? '#0000cc' :
   //            d > 500000000  ? '#BD0026' :
@@ -62,14 +59,14 @@ var geojson;
   //       dashArray: '',
   //       fillOpacity: 0.7
   //   });
-    
+
   //     console.log(layer.feature.properties.FORMAL_EN);
   //   $('#infoWindow').text(layer.feature.properties.FORMAL_EN);
   // }
 
-//   $.getJSON('data/world-countries.geojson', function(name) {
-//     geojson = L.geoJson(name,{
-//       style: style,
-//       onEachFeature: onEachFeature
-//     }).addTo(map);
-//   });
+  $.getJSON('data/world-countries.geojson', function(name) {
+    geojson = L.geoJson(name,{
+      style: style,
+      onEachFeature: onEachFeature
+    }).addTo(map);
+  });
