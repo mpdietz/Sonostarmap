@@ -25,7 +25,7 @@ map.addLayer(layer)
 
 var geojson;
 
-  this function takes a value and returns a color based on which bucket the value falls between
+  // this function takes a value and returns a color based on which bucket the value falls between
   function getColor(d) {
       return d > 1000000000 ? '#0000cc' :
              d > 500000000  ? '#BD0026' :
