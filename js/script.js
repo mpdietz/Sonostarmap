@@ -27,13 +27,13 @@ var geojson;
 
   // this function takes a value and returns a color based on which bucket the value falls between
   function getColor(d) {
-      return d > 1000000000 ? '#0000cc' :
-             d > 500000000  ? '#BD0026' :
-             d > 200000000  ? '#E31A1C' :
-             d > 10000000  ? '#FC4E2A' :
-             d > 5000000   ? '#FD8D3C' :
-             d > 100000   ? '#FEB24C' :
-             d < 100000   ? '#FED976' :
+      return d > 1000000000 ? '#8c510a' :
+             d > 500000000  ? '#d8b365' :
+             d > 200000000  ? '#f6e8c3' :
+             d > 10000000  ? '#f5f5f5' :
+             d > 5000000   ? '#d9f0d3' :
+             d > 100000   ? '#7fbf7b' :
+             d < 100000   ? '#1b7837' :
                         '#FFFFFF';
   }
 
@@ -55,16 +55,17 @@ var geojson;
 
     layer.setStyle({
         weight: 5,
-        color: '#666',
+        color: '#762a83',
         dashArray: '',
         fillOpacity: 0.7
     });
 
       console.log(layer.feature.properties.FORMAL_EN);
     $('#infoWindow').text(layer.feature.properties.FORMAL_EN);
+    $('#infoWindow').text(layer.feature.properties.POP_EST;
   }
 
-  
+
   //this runs on mouseout
   function resetHighlight(e) {
     geojson.resetStyle(e.target);
