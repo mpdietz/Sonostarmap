@@ -1,9 +1,11 @@
 html {
       font-family: sans-serif;
     }
-    .background {
-      background-image: url("http://turbo.designwoop.com/uploads/2012/03/18_free_subtle_textures_wood_pattern.jpg");
-    }
+
+  body {
+    background-image: url('http://turbo.designwoop.com/uploads/2012/03/18_free_subtle_textures_wood_pattern.jpg');
+}
+
     .header {
     width: 100%;
     height: 100px;
