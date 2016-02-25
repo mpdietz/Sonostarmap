@@ -1,11 +1,20 @@
 // Add mapp
-var map = L.map('myMap').setView([40.7127837, -74.0059413], 11);
+var map = L.map('myMap').setView([40.7127837, -74.0059413], 1);
 
 var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
 });
 
 map.addLayer(layer)
+
+// var miniMap = new L.Control.GlobeMiniMap(options).addTo(map);
+
+// {     
+//   land:'#FFFF00',
+//   water:'#3333FF',
+//   marker:'##55c107',
+//   topojsonSrc: 'path/to/world.json'
+// }
 
 //  $.getJSON('data/world-countries.geojson', function(data) {
 //     console.log(data);
