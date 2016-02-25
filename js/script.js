@@ -27,13 +27,13 @@ var geojson;
 
   // this function takes a value and returns a color based on which bucket the value falls between
   function getColor(d) {
-      return d > 1000000000 ? '#8c510a' :
-             d > 500000000  ? '#d8b365' :
-             d > 200000000  ? '#f6e8c3' :
+      return d > 1000000000 ? '#1b7837':
+             d > 500000000  ? '#5aae61':
+             d > 100000000  ? '#a6dba0':
              d > 10000000  ? '#d9f0d3' :
-             d > 5000000   ? '#a6dba0' :
-             d > 100000   ? '#5aae61' :
-             d < 100000   ? '#1b7837' :
+             d > 5000000   ? '#f6e8c3':
+             d > 100000   ? '#d8b365':
+             d < 100000   ? '#8c510a':
                         '#FFFFFF';
   }
 
@@ -61,7 +61,7 @@ var geojson;
     });
 
       console.log(layer.feature.properties.FORMAL_EN);
-    $('#infoWindow').text('Name:' + layer.feature.properties.FORMAL_EN + '</br> Population:' + layer.feature.properties.POP_EST);
+    $('#infoWindow').text('Name:' + layer.feature.properties.FORMAL_EN + ' Population:' + layer.feature.properties.POP_EST);
   }
 
 
