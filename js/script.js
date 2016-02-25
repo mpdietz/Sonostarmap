@@ -40,37 +40,32 @@ var geojson;
                         '#FFFFFF';
   }
 
-  //this function returns a style object, but dynamically sets fillColor based on the data
-  function style(feature) {
-    return {
-        fillColor: getColor(feature.properties.POP_EST),
-        weight: 2,
-        opacity: 1,
-        color: 'white',
-        dashArray: '3',
-        fillOpacity: 0.7
-    };
-  }
+  // //this function returns a style object, but dynamically sets fillColor based on the data
+  // function style(feature) {
+  //   return {
+  //       fillColor: getColor(feature.properties.POP_EST),
+  //       weight: 2,
+  //       opacity: 1,
+  //       color: 'white',
+  //       dashArray: '3',
+  //       fillOpacity: 0.7
+  //   };
+  // }
 
-  //this function is set to run when a user mouses over any polygon
-  function mouseoverFunction(e) {
-    var layer = e.target;
+  // //this function is set to run when a user mouses over any polygon
+  // function mouseoverFunction(e) {
+  //   var layer = e.target;
 
-    layer.setStyle({
-        weight: 5,
-        color: '#666',
-        dashArray: '',
-        fillOpacity: 0.7
-    });
-
-    if (!L.Browser.ie && !L.Browser.opera) {
-        layer.bringToFront();
-    }
-
-// Update the infowindow
-      console.log(layer.feature.properties.FORMAL_EN);
-    $('#infoWindow').text(layer.feature.properties.FORMAL_EN);
-  }
+  //   layer.setStyle({
+  //       weight: 5,
+  //       color: '#666',
+  //       dashArray: '',
+  //       fillOpacity: 0.7
+  //   });
+    
+  //     console.log(layer.feature.properties.FORMAL_EN);
+  //   $('#infoWindow').text(layer.feature.properties.FORMAL_EN);
+  // }
 
 //   $.getJSON('data/world-countries.geojson', function(name) {
 //     geojson = L.geoJson(name,{
