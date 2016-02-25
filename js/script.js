@@ -11,7 +11,7 @@ var options = {
   land:'#FFFF00',
   water:'#3333FF',
   marker:'#55c107',
-  topojsonSrc: 'path/to/world.json'
+  topojsonSrc: 'js/world.json'
 }
 
 var miniMap = new L.Control.GlobeMiniMap(options).addTo(map);
