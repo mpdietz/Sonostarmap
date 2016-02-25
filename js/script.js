@@ -28,8 +28,8 @@ var geojson;
   // this function takes a value and returns a color based on which bucket the value falls between
   function getColor(d) {
       return d > 1000000000 ? '#1b7837':
-             d > 500000000  ? '#5aae61':
-             d > 100000000  ? '#a6dba0':
+             d > 100000000  ? '#5aae61':
+             d > 50000000  ? '#a6dba0':
              d > 10000000  ? '#d9f0d3' :
              d > 5000000   ? '#f6e8c3':
              d > 100000   ? '#d8b365':
