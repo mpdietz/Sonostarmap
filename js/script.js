@@ -7,14 +7,14 @@ var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.
 
 map.addLayer(layer)
 
-// var options = {     
-//   land:'#FFFF00',
-//   water:'#3333FF',
-//   marker:'#55c107',
-//   topojsonSrc: 'path/to/world.json'
-// }
+var options = {     
+  land:'#FFFF00',
+  water:'#3333FF',
+  marker:'#55c107',
+  topojsonSrc: 'path/to/world.json'
+}
 
-// var miniMap = new L.Control.GlobeMiniMap(options).addTo(map);
+var miniMap = new L.Control.GlobeMiniMap(options).addTo(map);
 
  var panOptions = {
     animate: true,
