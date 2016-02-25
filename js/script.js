@@ -64,6 +64,21 @@ var geojson;
     $('#infoWindow').text(layer.feature.properties.FORMAL_EN);
   }
 
+  
+  //this runs on mouseout
+  function resetHighlight(e) {
+    geojson.resetStyle(e.target);
+  }
+
+  //this is executed once for each feature in the data, and adds listeners
+  function onEachFeature(feature, layer) {
+    layer.on({
+        mouseover: mouseoverFunction,
+        mouseout: resetHighlight
+        //click: zoomToFeature
+    });
+  }
+
   $.getJSON('data/world-countries.geojson', function(name) {
     geojson = L.geoJson(name,{
       style: style,
