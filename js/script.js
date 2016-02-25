@@ -7,14 +7,14 @@ var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.
 
 map.addLayer(layer)
 
-// var miniMap = new L.Control.GlobeMiniMap(options).addTo(map);
+var miniMap = new L.Control.GlobeMiniMap(options).addTo(map);
 
-// {     
-//   land:'#FFFF00',
-//   water:'#3333FF',
-//   marker:'##55c107',
-//   topojsonSrc: 'path/to/world.json'
-// }
+{     
+  land:'#FFFF00',
+  water:'#3333FF',
+  marker:'##55c107',
+  topojsonSrc: 'path/to/world.json'
+}
 
 //  $.getJSON('data/world-countries.geojson', function(data) {
 //     console.log(data);
