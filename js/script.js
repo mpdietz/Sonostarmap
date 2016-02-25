@@ -59,9 +59,8 @@ var geojson;
     }
 
 // Update the infowindow
-      console.log(layer.feature.properties.name);
-    $('#infoWindow').text(layer.feature.properties.name);
-
+      console.log(layer.feature.properties.FORMAL_EN);
+    $('#infoWindow').text(layer.feature.properties.FORMAL_EN);
   }
 
   $.getJSON('data/world-countries.geojson', function(state_data) {
