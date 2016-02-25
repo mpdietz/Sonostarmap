@@ -1,5 +1,5 @@
 // Add mapp
-var map = L.map('myMap').setView([40.7127837, -74.0059413], 1);
+var map = L.map('myMap').setView([40.7127837, -74.0059413], 2);
 
 var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
