@@ -1,6 +1,6 @@
 // // Numerals
-// npm install numeral
-var numeral = require('numeral');
+// // npm install numeral
+// var numeral = require('numeral');
 
 // Add mapp
 var map = L.map('myMap').setView([40.7127837, -74.0059413], 2);
