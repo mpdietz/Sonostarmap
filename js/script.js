@@ -64,7 +64,7 @@ var geojson;
     });
 
       console.log(layer.feature.properties.FORMAL_EN);
-    $('#infoWindow').text['<b> Name: </b>' + layer.feature.properties.FORMAL_EN + "<br> </br>" + '<b> Population: </b>' + formatnum(layer.feature.properties.POP_EST)];
+    $('#infoWindow').text[' Name:    ' + layer.feature.properties.FORMAL_EN + "<b> </b>" + '    Population: ' + formatNumber(layer.feature.properties.POP_EST)];
   }
 
 
