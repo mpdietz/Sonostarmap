@@ -1,3 +1,8 @@
+// Numerals
+npm install numeral
+var numeral = require('numeral');
+var population = numeral(layer.feature.properties.POP_EST).format('0,0');
+
 // Add mapp
 var map = L.map('myMap').setView([40.7127837, -74.0059413], 2);
 
@@ -12,10 +17,6 @@ var options = {
   water:'#D3D3D3',
   marker:'#762a83',
   topojsonSrc: 'js/world.json'
-}
-
-function formatNumber (num) {
-    return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
 }
 
 var miniMap = new L.Control.GlobeMiniMap(options).addTo(map);
@@ -64,7 +65,7 @@ var geojson;
     });
 
       console.log(layer.feature.properties.FORMAL_EN);
-    $('#infoWindow').text(' Name:    ' + layer.feature.properties.FORMAL_EN + '    Population: ' + layer.feature.properties.POP_EST);
+    $('#infoWindow').text(' Name:    ' + layer.feature.properties.FORMAL_EN + '    Population: ' + population);
   }
 
 
