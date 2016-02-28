@@ -10,7 +10,7 @@ map.addLayer(layer)
 var options = {     
   land:'#FFFFFF',
   water:'#D3D3D3',
-  marker:'#55c107',
+  marker:'#762a83',
   topojsonSrc: 'js/world.json'
 }
 
@@ -41,11 +41,10 @@ var geojson;
   function style(feature) {
     return {
         fillColor: getColor(feature.properties.POP_EST),
-        weight: 2,
+        weight: 1,
         opacity: 1,
         color: 'white',
-        dashArray: '3',
-        fillOpacity: 0.7
+        fillOpacity: 0.8
     };
   }
 
@@ -57,11 +56,11 @@ var geojson;
         weight: 5,
         color: '#762a83',
         dashArray: '',
-        fillOpacity: 0.7
+        fillOpacity: 0.5
     });
 
       console.log(layer.feature.properties.FORMAL_EN);
-    $('#infoWindow').text('Name:' + layer.feature.properties.FORMAL_EN + ' Population:' + layer.feature.properties.POP_EST);
+    $('#infoWindow').text('<b> Name: </b>' + layer.feature.properties.FORMAL_EN + "<br> </br>" + '<b> Population: </b>' + layer.feature.properties.POP_EST);
   }
 
 

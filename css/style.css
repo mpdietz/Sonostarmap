@@ -38,15 +38,16 @@ html {
     }
 
    #infoWindow {
-      background: #FFFFFF;
-      padding: 15px;
-      border-radius: 10px;
-      font-size: 14px;
-      position: relative;
-      top: -78px;
-      width: auto;
-      display: inline;
-      margin-left: 20px;
+    background: #FFFFFF;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 12px;
+    position: relative;
+    top: -50px;
+    width: auto;
+    display: inline;
+    margin-left: 15px;
+    font-weight: bold;
     }
 
     .galleryimg{
