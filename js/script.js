@@ -14,7 +14,9 @@ var options = {
   topojsonSrc: 'js/world.json'
 }
 
-var population = layer.feature.properties.POP_EST.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
+function formatNumber (num) {
+    return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
+}
 
 var miniMap = new L.Control.GlobeMiniMap(options).addTo(map);
 
@@ -62,7 +64,7 @@ var geojson;
     });
 
       console.log(layer.feature.properties.FORMAL_EN);
-    $('#infoWindow').text('<b> Name: </b>' + layer.feature.properties.FORMAL_EN + "<br> </br>" + '<b> Population: </b>' + population);
+    $('#infoWindow').text['<b> Name: </b>' + formatnum(layer.feature.properties.FORMAL_EN) + "<br> </br>" + '<b> Population: </b>' + formatnum(layer.feature.properties.POP_EST)];
   }
 
 
