@@ -1,7 +1,6 @@
 // // Numerals
 // npm install numeral
-// var numeral = require('numeral');
-// var population = numeral(layer.feature.properties.POP_EST).format('0,0');
+var numeral = require('numeral');
 
 // Add mapp
 var map = L.map('myMap').setView([40.7127837, -74.0059413], 2);
@@ -68,7 +67,7 @@ var miniMap = new L.Control.GlobeMiniMap(options).addTo(map);
 var population = numeral(layer.feature.properties.POP_EST).format('0,0');
 
       console.log(layer.feature.properties.FORMAL_EN);
-    $('#infoWindow').text(' Name:    ' + layer.feature.properties.FORMAL_EN + '    Population: ' + layer.feature.properties.POP_EST);
+    $('#infoWindow').text(' Name:    ' + layer.feature.properties.FORMAL_EN + '    Population: ' + population);
   }
 
 
