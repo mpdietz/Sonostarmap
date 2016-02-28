@@ -67,7 +67,7 @@ var population = numeral(layer.feature.properties.POP_EST).format('0,0');
 
       console.log(layer.feature.properties.FORMAL_EN);
     $('#infoWindow').text(' Name:    ' + layer.feature.properties.FORMAL_EN + '    Population: ' + layer.feature.properties.POP_EST);
-      }];
+   
 
 
   //this runs on mouseout
