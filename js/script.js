@@ -1,5 +1,5 @@
 // Numerals
-npm install numeral
+// npm install numeral
 var numeral = require('numeral');
 var population = numeral(layer.feature.properties.POP_EST).format('0,0');
 
