@@ -1,7 +1,6 @@
 // // Numerals
 // npm install numeral
 // var numeral = require('numeral');
-// var population = numeral(layer.feature.properties.POP_EST).format('0,0');
 
 // Add mapp
 var map = L.map('myMap').setView([40.7127837, -74.0059413], 2);
@@ -64,9 +63,11 @@ var geojson;
         fillOpacity: 0.5
     });
 
+var population = numeral(layer.feature.properties.POP_EST).format('0,0');
+
       console.log(layer.feature.properties.FORMAL_EN);
-    $('#infoWindow').text(' Name:    ' + layer.feature.properties.FORMAL_EN + '<br></br>    Population: ' + layer.feature.properties.POP_EST);
-  }
+    $('#infoWindow').text(' Name:    ' + layer.feature.properties.FORMAL_EN + '    Population: ' + layer.feature.properties.POP_EST;
+      }]
 
 
   //this runs on mouseout
