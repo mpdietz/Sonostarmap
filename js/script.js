@@ -27,7 +27,7 @@ var miniMap = new L.Control.GlobeMiniMap(options).addTo(map);
 
   // From Chloropleth tutorial
 
-var geojson;
+
 
   // this function takes a value and returns a color based on which bucket the value falls between
   function getColor(d) {
@@ -67,7 +67,7 @@ var population = numeral(layer.feature.properties.POP_EST).format('0,0');
 
       console.log(layer.feature.properties.FORMAL_EN);
     $('#infoWindow').text(' Name:    ' + layer.feature.properties.FORMAL_EN + '    Population: ' + layer.feature.properties.POP_EST);
-      }]
+      }];
 
 
   //this runs on mouseout
@@ -84,9 +84,13 @@ var population = numeral(layer.feature.properties.POP_EST).format('0,0');
     });
   }
 
+var vector;
+
   $.getJSON('data/world-countries.geojson', function(name) {
-    geojson = L.geoJson(name,{
+    vector = L.geoJson(name,{
       style: style,
       onEachFeature: onEachFeature
     }).addTo(map);
   });
+
+
