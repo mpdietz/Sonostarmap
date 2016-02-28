@@ -14,6 +14,8 @@ var options = {
   topojsonSrc: 'js/world.json'
 }
 
+var population = layer.feature.properties.POP_EST.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
+
 var miniMap = new L.Control.GlobeMiniMap(options).addTo(map);
 
  var panOptions = {
@@ -60,7 +62,7 @@ var geojson;
     });
 
       console.log(layer.feature.properties.FORMAL_EN);
-    $('#infoWindow').text('<b> Name: </b>' + layer.feature.properties.FORMAL_EN + "<br> </br>" + '<b> Population: </b>' + layer.feature.properties.POP_EST);
+    $('#infoWindow').text('<b> Name: </b>' + layer.feature.properties.FORMAL_EN + "<br> </br>" + '<b> Population: </b>' + population);
   }
 
 
