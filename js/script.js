@@ -68,7 +68,7 @@ var miniMap = new L.Control.GlobeMiniMap(options).addTo(map);
 var population = numeral(layer.feature.properties.POP_EST).format('0,0');
 
       console.log(layer.feature.properties.FORMAL_EN);
-    $('#infoWindow').text(' Name:    ' + layer.feature.properties.FORMAL_EN + '<br></br>    Population: ' + layer.feature.properties.POP_EST);
+    $('#infoWindow').text(' Name:    ' + layer.feature.properties.FORMAL_EN + '    Population: ' + layer.feature.properties.POP_EST);
   }
 
 
