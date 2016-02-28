@@ -65,10 +65,8 @@ var miniMap = new L.Control.GlobeMiniMap(options).addTo(map);
 
 var population = numeral(layer.feature.properties.POP_EST).format('0,0');
 
-      console.log(layer.feature.properties.FORMAL_EN);
+    console.log(layer.feature.properties.FORMAL_EN);
     $('#infoWindow').text(' Name:    ' + layer.feature.properties.FORMAL_EN + '    Population: ' + layer.feature.properties.POP_EST);
-   
-
 
   //this runs on mouseout
   function resetHighlight(e) {
@@ -84,10 +82,10 @@ var population = numeral(layer.feature.properties.POP_EST).format('0,0');
     });
   }
 
-var vector;
+var geojson;
 
   $.getJSON('data/world-countries.geojson', function(name) {
-    vector = L.geoJson(name,{
+    geojson = L.geoJson(name,{
       style: style,
       onEachFeature: onEachFeature
     }).addTo(map);
